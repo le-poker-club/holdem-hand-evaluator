@@ -188,10 +188,10 @@ impl FromStr for Hand {
                 )),
             }?;
             let suit_id = match suit_char.to_ascii_lowercase() {
-                'c' => Ok(0),
-                'd' => Ok(1),
-                'h' => Ok(2),
-                's' => Ok(3),
+                's' => Ok(0),
+                'h' => Ok(1),
+                'c' => Ok(2),
+                'd' => Ok(3),
                 ch => Err(format!(
                     "parse failed: expected suit character, but got '{}'",
                     ch
